@@ -1,0 +1,129 @@
+2026-02-25 07:32:40,226 - main - INFO - === Logging system initialized ===
+2026-02-25 07:32:40,226 - main - INFO - Log file: logs/app_20260225_073240.log
+2026-02-25 07:32:40,227 - main - INFO - Log level: INFO
+2026-02-25 07:32:40,227 - main - INFO - Timestamp: 20260225_073240
+2026-02-25 07:32:54,767 - main - INFO - Included router: routers.aihub.router
+2026-02-25 07:32:55,125 - main - INFO - Included router: routers.auth.router
+2026-02-25 07:32:55,306 - main - INFO - Included router: routers.cidades.router
+2026-02-25 07:32:55,497 - main - INFO - Included router: routers.confirmacoes.router
+2026-02-25 07:32:55,627 - main - INFO - Included router: routers.health.router
+2026-02-25 07:32:55,717 - main - INFO - Included router: routers.leituras_auxiliar.router
+2026-02-25 07:32:55,848 - main - INFO - Included router: routers.pacotes.router
+2026-02-25 07:32:55,946 - main - INFO - Included router: routers.perfis_usuarios.router
+2026-02-25 07:32:56,066 - main - INFO - Included router: routers.resumos_triagem.router
+2026-02-25 07:32:56,180 - main - INFO - Included router: routers.rotas.router
+2026-02-25 07:32:56,226 - main - INFO - Included router: routers.settings.router
+2026-02-25 07:32:56,411 - main - INFO - Included router: routers.storage.router
+2026-02-25 07:32:56,609 - main - INFO - Included router: routers.transferencias.router
+2026-02-25 07:32:56,730 - main - INFO - Included router: routers.user.router
+2026-02-25 07:32:56,731 - main - INFO - === Application startup initiated ===
+2026-02-25 07:32:56,731 - services.database - DEBUG - [DB_OP] Starting database initialization
+2026-02-25 07:32:56,732 - services.database - INFO - 🔧 Starting database initialization...
+2026-02-25 07:32:56,732 - core.database - INFO - Starting database initialization...
+2026-02-25 07:32:56,732 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-02-25 07:32:56,732 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-02-25 07:32:56,733 - core.database - INFO - Creating async database engine...
+2026-02-25 07:32:56,733 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-02-25 07:32:57,488 - core.database - INFO - Database engine created successfully
+2026-02-25 07:32:57,489 - core.database - INFO - Creating async session maker...
+2026-02-25 07:32:57,489 - core.database - INFO - Async session maker created successfully
+2026-02-25 07:32:57,489 - core.database - INFO - Database connection initialized successfully
+2026-02-25 07:32:57,489 - services.database - INFO - 🔧 Database connection initialized, now creating tables if tables not exist...
+2026-02-25 07:32:57,489 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-02-25 07:32:57,489 - core.database - INFO - 🔧 Starting table creation...
+2026-02-25 07:32:59,233 - core.database - INFO - Tables initialized successfully
+2026-02-25 07:32:59,233 - core.database - DEBUG - [DB_OP] Create tables completed in 1.7439s
+2026-02-25 07:32:59,292 - services.database - INFO - 🔧 Table creation completed
+2026-02-25 07:32:59,293 - services.database - INFO - Database initialized successfully
+2026-02-25 07:32:59,293 - services.database - DEBUG - [DB_OP] Database initialization completed in 2.5614s
+2026-02-25 07:32:59,294 - services.mock_data - INFO - Processing mock data file cidades.json for table cidades
+2026-02-25 07:32:59,294 - services.mock_data - INFO - Processing mock data file pacotes.json for table pacotes
+2026-02-25 07:33:01,264 - services.mock_data - INFO - Table cidades already has 5 rows; skipping mock insert
+2026-02-25 07:33:01,336 - services.mock_data - INFO - Table pacotes already has 14 rows; skipping mock insert
+2026-02-25 07:33:01,395 - services.database - DEBUG - [DB_OP] Starting database initialization
+2026-02-25 07:33:01,395 - services.database - INFO - 🔧 Starting database initialization...
+2026-02-25 07:33:01,395 - core.database - INFO - Starting database initialization...
+2026-02-25 07:33:01,395 - core.database - INFO - Database already initialized
+2026-02-25 07:33:01,396 - services.database - INFO - 🔧 Database connection initialized, now creating tables if tables not exist...
+2026-02-25 07:33:01,396 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-02-25 07:33:01,396 - core.database - INFO - Tables already initialized
+2026-02-25 07:33:01,396 - services.database - INFO - 🔧 Table creation completed
+2026-02-25 07:33:01,397 - services.database - INFO - Database initialized successfully
+2026-02-25 07:33:01,397 - services.database - DEBUG - [DB_OP] Database initialization completed in 0.0021s
+2026-02-25 07:33:01,397 - core.config - DEBUG - Read dynamic attribute admin_user_id from environment variable ADMIN_USER_ID
+2026-02-25 07:33:01,397 - core.config - DEBUG - Read dynamic attribute admin_user_email from environment variable ADMIN_USER_EMAIL
+2026-02-25 07:33:01,758 - services.auth - DEBUG - Admin user 980326 already exists
+2026-02-25 07:33:01,817 - main - INFO - === Application startup completed successfully ===
+2026-02-25 07:33:14,470 - core.config - DEBUG - Read dynamic attribute jwt_secret_key from environment variable JWT_SECRET_KEY
+2026-02-25 07:33:14,470 - core.config - DEBUG - Read dynamic attribute jwt_algorithm from environment variable JWT_ALGORITHM
+2026-02-25 07:33:14,813 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 07:33:15,019 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 07:33:15,020 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 07:33:15,020 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-02-25 07:33:15,021 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=20, fields=None
+2026-02-25 07:33:15,549 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 07:33:15,550 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5303s
+2026-02-25 07:33:15,717 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 07:33:15,874 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 07:33:15,874 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 07:33:15,875 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 07:33:15,875 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=20, fields=None
+2026-02-25 07:33:16,346 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 07:33:16,347 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4727s
+2026-02-25 07:33:16,541 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 07:33:16,542 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0007s
+2026-02-25 07:33:16,542 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 07:33:17,008 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 07:33:17,008 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4675s
+2026-02-25 07:34:22,389 - dependencies.auth - DEBUG - Authentication required for request GET /api/v1/auth/me
+2026-02-25 07:34:23,381 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 07:34:23,537 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 07:34:23,537 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 07:34:23,538 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 07:34:23,538 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=20, fields=None
+2026-02-25 07:34:23,891 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 07:34:23,892 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3551s
+2026-02-25 07:34:24,064 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 07:34:24,217 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 07:34:24,217 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 07:34:24,217 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 07:34:24,218 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=20, fields=None
+2026-02-25 07:34:24,565 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 07:34:24,566 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3492s
+2026-02-25 07:34:24,727 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 07:34:24,728 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-02-25 07:34:24,728 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 07:34:25,199 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 07:34:25,200 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4729s
+2026-02-25 07:34:43,453 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 07:34:43,453 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 07:34:43,453 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 07:34:43,454 - routers.perfis_usuarios - DEBUG - Deleting perfis_usuarios with id: 46
+2026-02-25 07:34:43,459 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 07:34:43,623 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 07:34:43,624 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 07:34:43,624 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 07:34:43,625 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=20, fields=None
+2026-02-25 07:34:43,979 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 07:34:43,980 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3558s
+2026-02-25 07:34:43,982 - services.perfis_usuarios - INFO - Deleted perfis_usuarios 46
+2026-02-25 07:34:43,982 - routers.perfis_usuarios - INFO - Perfis_usuarios 46 deleted successfully
+2026-02-25 07:34:43,982 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5290s
+2026-02-25 07:34:44,276 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 07:34:44,619 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 07:34:44,621 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 07:34:44,622 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 07:34:44,622 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=20, fields=None
+2026-02-25 07:34:44,970 - routers.perfis_usuarios - DEBUG - Found 0 perfis_usuarioss
+2026-02-25 07:34:44,971 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3501s
+2026-02-25 07:34:45,209 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 07:34:45,511 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 07:34:45,511 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 07:34:45,512 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 07:34:45,512 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=20, fields=None
+2026-02-25 07:34:45,865 - routers.perfis_usuarios - DEBUG - Found 0 perfis_usuarioss
+2026-02-25 07:34:45,866 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3544s
+2026-02-25 07:34:46,177 - services.database - DEBUG - [DB_OP] Starting database close
+2026-02-25 07:34:46,301 - core.database - INFO - Database connection closed and engine disposed
+2026-02-25 07:34:46,301 - services.database - INFO - Database connections closed
+2026-02-25 07:34:46,301 - services.database - DEBUG - [DB_OP] Database close completed in 0.1243s

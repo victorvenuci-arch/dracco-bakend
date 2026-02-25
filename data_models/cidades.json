@@ -1,0 +1,48 @@
+{
+    "title": "cidades",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "nome": {
+            "type": "string",
+            "description": "City name"
+        },
+        "entregador_padrao_id": {
+            "type": "string",
+            "description": "Default delivery person user ID"
+        },
+        "entregador_padrao_nome": {
+            "type": "string",
+            "description": "Default delivery person name"
+        },
+        "motorista_id": {
+            "type": "string",
+            "description": "Assigned driver user ID"
+        },
+        "motorista_nome": {
+            "type": "string",
+            "description": "Assigned driver name"
+        },
+        "veiculo_tipo": {
+            "type": "string",
+            "description": "Vehicle type: Van, Fiorino, Carro de passeio"
+        },
+        "status": {
+            "type": "string",
+            "description": "City status"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "nome",
+        "status"
+    ]
+}

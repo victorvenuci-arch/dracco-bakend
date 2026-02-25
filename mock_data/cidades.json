@@ -1,0 +1,47 @@
+[
+    {
+        "nome": "Iguatu",
+        "entregador_padrao_id": "",
+        "entregador_padrao_nome": "",
+        "motorista_id": "",
+        "motorista_nome": "",
+        "status": "CARREGADO",
+        "created_at": "2026-02-20 00:00:00"
+    },
+    {
+        "nome": "Carius",
+        "entregador_padrao_id": "",
+        "entregador_padrao_nome": "",
+        "motorista_id": "",
+        "motorista_nome": "",
+        "status": "CARREGADO",
+        "created_at": "2026-02-20 00:00:00"
+    },
+    {
+        "nome": "Jucas",
+        "entregador_padrao_id": "",
+        "entregador_padrao_nome": "",
+        "motorista_id": "",
+        "motorista_nome": "",
+        "status": "CARREGADO",
+        "created_at": "2026-02-20 00:00:00"
+    },
+    {
+        "nome": "Cedro",
+        "entregador_padrao_id": "",
+        "entregador_padrao_nome": "",
+        "motorista_id": "",
+        "motorista_nome": "",
+        "status": "CARREGADO",
+        "created_at": "2026-02-20 00:00:00"
+    },
+    {
+        "nome": "Icó",
+        "entregador_padrao_id": "",
+        "entregador_padrao_nome": "",
+        "motorista_id": "",
+        "motorista_nome": "",
+        "status": "CARREGADO",
+        "created_at": "2026-02-20 00:00:00"
+    }
+]

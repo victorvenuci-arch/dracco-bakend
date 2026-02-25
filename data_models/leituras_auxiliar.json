@@ -1,0 +1,46 @@
+{
+    "title": "leituras_auxiliar",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "codigo_rastreio": {
+            "type": "string",
+            "description": "Tracking code scanned"
+        },
+        "cidade_id": {
+            "type": "integer",
+            "description": "City ID"
+        },
+        "cidade_nome": {
+            "type": "string",
+            "description": "City name"
+        },
+        "data_vencimento": {
+            "type": "string",
+            "description": "Expiration date for the batch"
+        },
+        "auxiliar_nome": {
+            "type": "string",
+            "description": "Auxiliary name who scanned"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID of auxiliary"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Scan timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "codigo_rastreio",
+        "cidade_id",
+        "cidade_nome",
+        "user_id"
+    ]
+}

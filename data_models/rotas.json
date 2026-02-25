@@ -1,0 +1,50 @@
+{
+    "title": "rotas",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "motorista_id": {
+            "type": "string",
+            "description": "Driver user ID"
+        },
+        "motorista_nome": {
+            "type": "string",
+            "description": "Driver name"
+        },
+        "veiculo_tipo": {
+            "type": "string",
+            "description": "Vehicle type"
+        },
+        "cidades_ids": {
+            "type": "string",
+            "description": "Comma-separated city IDs"
+        },
+        "cidades_nomes": {
+            "type": "string",
+            "description": "Comma-separated city names"
+        },
+        "status": {
+            "type": "string",
+            "description": "Route status"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID who created the route"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "motorista_id",
+        "motorista_nome",
+        "veiculo_tipo",
+        "user_id"
+    ]
+}

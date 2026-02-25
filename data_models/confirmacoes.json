@@ -1,0 +1,48 @@
+{
+    "title": "confirmacoes",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "cidade_id": {
+            "type": "integer",
+            "description": "City ID"
+        },
+        "cidade_nome": {
+            "type": "string",
+            "description": "City name"
+        },
+        "entregador_id": {
+            "type": "string",
+            "description": "Delivery person user ID"
+        },
+        "entregador_nome": {
+            "type": "string",
+            "description": "Delivery person name"
+        },
+        "data_hora": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Confirmation timestamp"
+        },
+        "gps_lat": {
+            "type": "number",
+            "description": "GPS latitude"
+        },
+        "gps_lng": {
+            "type": "number",
+            "description": "GPS longitude"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        }
+    },
+    "required": [
+        "id",
+        "cidade_id",
+        "user_id"
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "title": "resumos_triagem",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "cidade_id": {
+            "type": "integer",
+            "description": "City ID"
+        },
+        "cidade_nome": {
+            "type": "string",
+            "description": "City name"
+        },
+        "quantidade_pacotes": {
+            "type": "integer",
+            "description": "Number of packages in this triage"
+        },
+        "data_vencimento": {
+            "type": "string",
+            "description": "Expiration date of the batch"
+        },
+        "auxiliar_responsavel": {
+            "type": "string",
+            "description": "Responsible auxiliary name"
+        },
+        "status": {
+            "type": "string",
+            "description": "Status of the triage summary"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID of the auxiliary"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "cidade_id",
+        "cidade_nome",
+        "quantidade_pacotes",
+        "user_id"
+    ]
+}

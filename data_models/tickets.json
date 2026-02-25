@@ -1,0 +1,43 @@
+{
+    "title": "tickets",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "tbr": {
+            "type": "string",
+            "description": "TBR tracking code"
+        },
+        "motivo": {
+            "type": "string",
+            "description": "Reason: Danificado, 3a_tentativa, Recusado_cliente, Recusado_entregador, Endereco_nao_encontrado"
+        },
+        "base_code": {
+            "type": "string",
+            "description": "Base code this ticket belongs to"
+        },
+        "created_by": {
+            "type": "string",
+            "description": "Name of user who created the ticket"
+        },
+        "status": {
+            "type": "string",
+            "description": "Ticket status: ABERTO, EM_ANDAMENTO, RESOLVIDO, FECHADO"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "tbr",
+        "motivo",
+        "base_code",
+        "created_by",
+        "status"
+    ]
+}

@@ -1,0 +1,68 @@
+{
+    "title": "dracco_users",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "nome": {
+            "type": "string",
+            "description": "Display name"
+        },
+        "login": {
+            "type": "string",
+            "description": "Login username, unique"
+        },
+        "senha_hash": {
+            "type": "string",
+            "description": "Hashed password"
+        },
+        "level": {
+            "type": "integer",
+            "description": "User level: 100=Admin Master, 80=Super, 60=Gerente, 40=Auxiliar, 30=Motorista, 20=Entregador"
+        },
+        "base_code": {
+            "type": "string",
+            "description": "Base code this user belongs to"
+        },
+        "permissions": {
+            "type": "string",
+            "description": "JSON string of custom permissions"
+        },
+        "is_active": {
+            "type": "boolean",
+            "description": "Whether user is active"
+        },
+        "is_online": {
+            "type": "boolean",
+            "description": "Whether user is currently online"
+        },
+        "last_activity": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Last activity timestamp"
+        },
+        "veiculo_tipo": {
+            "type": "string",
+            "description": "Vehicle type for motorista"
+        },
+        "login_amazon": {
+            "type": "string",
+            "description": "Amazon login for motorista"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "nome",
+        "login",
+        "senha_hash",
+        "level",
+        "base_code"
+    ]
+}

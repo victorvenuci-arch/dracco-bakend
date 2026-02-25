@@ -1,0 +1,40 @@
+{
+    "title": "perfis_usuarios",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "nome": {
+            "type": "string",
+            "description": "User display name"
+        },
+        "perfil": {
+            "type": "string",
+            "description": "Profile type: ADMINISTRADOR, GESTOR, AUXILIAR, MOTORISTA, ENTREGADOR"
+        },
+        "cidade_vinculada_id": {
+            "type": "integer",
+            "description": "Linked city ID for entregador"
+        },
+        "cidade_vinculada_nome": {
+            "type": "string",
+            "description": "Linked city name"
+        },
+        "ativo": {
+            "type": "boolean",
+            "description": "Active status"
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "nome",
+        "perfil"
+    ]
+}

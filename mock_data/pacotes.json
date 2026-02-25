@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "codigo_rastreio": "PKG-ICO-001",
+        "cidade_id": 1,
+        "cidade_nome": "Icó",
+        "status": "CARREGADO",
+        "created_at": "2026-02-20 08:00:00"
+    },
+    {
+        "id": 2,
+        "codigo_rastreio": "PKG-ICO-002",
+        "cidade_id": 1,
+        "cidade_nome": "Icó",
+        "status": "CARREGADO",
+        "created_at": "2026-02-20 08:00:00"
+    },
+    {
+        "id": 3,
+        "codigo_rastreio": "PKG-ICO-003",
+        "cidade_id": 1,
+        "cidade_nome": "Icó",
+        "status": "CARREGADO",
+        "created_at": "2026-02-20 08:00:00"
+    },
+    {
+        "id": 4,
+        "codigo_rastreio": "PKG-ICO-004",
+        "cidade_id": 1,
+        "cidade_nome": "Icó",
+        "status": "CARREGADO",
+        "created_at": "2026-02-20 08:00:00"
+    },
+    {
+        "id": 5,
+        "codigo_rastreio": "PKG-ICO-005",
+        "cidade_id": 1,
+        "cidade_nome": "Icó",
+        "status": "CARREGADO",
+        "created_at": "2026-02-20 08:00:00"
+    },
+    {
+        "id": 6,
+        "codigo_rastreio": "PKG-JUA-001",
+        "cidade_id": 2,
+        "cidade_nome": "Juazeiro do Norte",
+        "status": "CARREGADO",
+        "created_at": "2026-02-20 08:00:00"
+    },
+    {
+        "id": 7,
+        "codigo_rastreio": "PKG-JUA-002",
+        "cidade_id": 2,
+        "cidade_nome": "Juazeiro do Norte",
+        "status": "CARREGADO",
+        "created_at": "2026-02-20 08:00:00"
+    },
+    {
+        "id": 8,
+        "codigo_rastreio": "PKG-JUA-003",
+        "cidade_id": 2,
+        "cidade_nome": "Juazeiro do Norte",
+        "status": "CARREGADO",
+        "created_at": "2026-02-20 08:00:00"
+    },
+    {
+        "id": 9,
+        "codigo_rastreio": "PKG-JUA-004",
+        "cidade_id": 2,
+        "cidade_nome": "Juazeiro do Norte",
+        "status": "CARREGADO",
+        "created_at": "2026-02-20 08:00:00"
+    },
+    {
+        "id": 10,
+        "codigo_rastreio": "PKG-CRA-001",
+        "cidade_id": 3,
+        "cidade_nome": "Crato",
+        "status": "CARREGADO",
+        "created_at": "2026-02-20 08:00:00"
+    },
+    {
+        "id": 11,
+        "codigo_rastreio": "PKG-CRA-002",
+        "cidade_id": 3,
+        "cidade_nome": "Crato",
+        "status": "CARREGADO",
+        "created_at": "2026-02-20 08:00:00"
+    },
+    {
+        "id": 12,
+        "codigo_rastreio": "PKG-CRA-003",
+        "cidade_id": 3,
+        "cidade_nome": "Crato",
+        "status": "CARREGADO",
+        "created_at": "2026-02-20 08:00:00"
+    }
+]

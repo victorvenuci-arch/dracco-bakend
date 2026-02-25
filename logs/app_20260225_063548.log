@@ -1,0 +1,996 @@
+2026-02-25 06:35:48,882 - main - INFO - === Logging system initialized ===
+2026-02-25 06:35:48,882 - main - INFO - Log file: logs/app_20260225_063548.log
+2026-02-25 06:35:48,882 - main - INFO - Log level: INFO
+2026-02-25 06:35:48,882 - main - INFO - Timestamp: 20260225_063548
+2026-02-25 06:35:51,410 - main - INFO - Included router: routers.aihub.router
+2026-02-25 06:35:51,520 - main - INFO - Included router: routers.auth.router
+2026-02-25 06:35:51,630 - main - INFO - Included router: routers.cidades.router
+2026-02-25 06:35:51,789 - main - INFO - Included router: routers.confirmacoes.router
+2026-02-25 06:35:51,812 - main - INFO - Included router: routers.health.router
+2026-02-25 06:35:51,935 - main - INFO - Included router: routers.leituras_auxiliar.router
+2026-02-25 06:35:52,035 - main - INFO - Included router: routers.pacotes.router
+2026-02-25 06:35:52,138 - main - INFO - Included router: routers.perfis_usuarios.router
+2026-02-25 06:35:52,300 - main - INFO - Included router: routers.resumos_triagem.router
+2026-02-25 06:35:52,402 - main - INFO - Included router: routers.rotas.router
+2026-02-25 06:35:52,439 - main - INFO - Included router: routers.settings.router
+2026-02-25 06:35:52,544 - main - INFO - Included router: routers.storage.router
+2026-02-25 06:35:52,653 - main - INFO - Included router: routers.transferencias.router
+2026-02-25 06:35:52,698 - main - INFO - Included router: routers.user.router
+2026-02-25 06:35:52,699 - main - INFO - === Application startup initiated ===
+2026-02-25 06:35:52,699 - services.database - DEBUG - [DB_OP] Starting database initialization
+2026-02-25 06:35:52,699 - services.database - INFO - 🔧 Starting database initialization...
+2026-02-25 06:35:52,699 - core.database - INFO - Starting database initialization...
+2026-02-25 06:35:52,700 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-02-25 06:35:52,700 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-02-25 06:35:52,701 - core.database - INFO - Creating async database engine...
+2026-02-25 06:35:52,701 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-02-25 06:35:52,743 - core.database - INFO - Database engine created successfully
+2026-02-25 06:35:52,743 - core.database - INFO - Creating async session maker...
+2026-02-25 06:35:52,743 - core.database - INFO - Async session maker created successfully
+2026-02-25 06:35:52,743 - core.database - INFO - Database connection initialized successfully
+2026-02-25 06:35:52,743 - services.database - INFO - 🔧 Database connection initialized, now creating tables if tables not exist...
+2026-02-25 06:35:52,743 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-02-25 06:35:52,743 - core.database - INFO - 🔧 Starting table creation...
+2026-02-25 06:35:54,454 - core.database - INFO - Tables initialized successfully
+2026-02-25 06:35:54,454 - core.database - DEBUG - [DB_OP] Create tables completed in 1.7108s
+2026-02-25 06:35:54,518 - services.database - INFO - 🔧 Table creation completed
+2026-02-25 06:35:54,518 - services.database - INFO - Database initialized successfully
+2026-02-25 06:35:54,518 - services.database - DEBUG - [DB_OP] Database initialization completed in 1.8192s
+2026-02-25 06:35:54,519 - services.mock_data - INFO - Processing mock data file cidades.json for table cidades
+2026-02-25 06:35:54,521 - services.mock_data - INFO - Processing mock data file pacotes.json for table pacotes
+2026-02-25 06:35:56,646 - services.mock_data - INFO - Table pacotes already has 14 rows; skipping mock insert
+2026-02-25 06:35:56,663 - services.mock_data - INFO - Inserted 5 mock records into cidades
+2026-02-25 06:35:56,722 - services.database - DEBUG - [DB_OP] Starting database initialization
+2026-02-25 06:35:56,723 - services.database - INFO - 🔧 Starting database initialization...
+2026-02-25 06:35:56,723 - core.database - INFO - Starting database initialization...
+2026-02-25 06:35:56,723 - core.database - INFO - Database already initialized
+2026-02-25 06:35:56,723 - services.database - INFO - 🔧 Database connection initialized, now creating tables if tables not exist...
+2026-02-25 06:35:56,723 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-02-25 06:35:56,723 - core.database - INFO - Tables already initialized
+2026-02-25 06:35:56,723 - services.database - INFO - 🔧 Table creation completed
+2026-02-25 06:35:56,724 - services.database - INFO - Database initialized successfully
+2026-02-25 06:35:56,724 - services.database - DEBUG - [DB_OP] Database initialization completed in 0.0013s
+2026-02-25 06:35:56,724 - core.config - DEBUG - Read dynamic attribute admin_user_id from environment variable ADMIN_USER_ID
+2026-02-25 06:35:56,724 - core.config - DEBUG - Read dynamic attribute admin_user_email from environment variable ADMIN_USER_EMAIL
+2026-02-25 06:35:57,162 - services.auth - DEBUG - Admin user 980326 already exists
+2026-02-25 06:35:57,224 - main - INFO - === Application startup completed successfully ===
+2026-02-25 06:36:07,056 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:36:07,058 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0010s
+2026-02-25 06:36:07,058 - routers.auth - INFO - [token/exchange] Received platform token exchange request
+2026-02-25 06:36:07,058 - core.config - DEBUG - Read dynamic attribute oidc_issuer_url from environment variable OIDC_ISSUER_URL
+2026-02-25 06:36:07,058 - routers.auth - DEBUG - [token/exchange] Verifying token with issuer: https://auth.atoms.dev/api/v1/oidc/platform/tokens/verify
+2026-02-25 06:36:07,348 - httpcore.connection - DEBUG - connect_tcp.started host='auth.atoms.dev' port=443 local_address=None timeout=5.0 socket_options=None
+2026-02-25 06:36:07,349 - dependencies.auth - DEBUG - Authentication required for request GET /api/v1/auth/me
+2026-02-25 06:36:07,392 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7fd4347d5600>
+2026-02-25 06:36:07,392 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7fd435438ec0> server_hostname='auth.atoms.dev' timeout=5.0
+2026-02-25 06:36:07,411 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7fd4347d5360>
+2026-02-25 06:36:07,411 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-25 06:36:07,412 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-02-25 06:36:07,412 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-25 06:36:07,412 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-02-25 06:36:07,412 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-25 06:36:07,444 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 25 Feb 2026 14:36:07 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-response-time', b'0.001s'), (b'x-request-id', b'440ae58a7540dd466703961ed4c53063'), (b'cf-cache-status', b'DYNAMIC'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9d37eee26f57889a-LAX')])
+2026-02-25 06:36:07,445 - httpx - INFO - HTTP Request: POST https://auth.atoms.dev/api/v1/oidc/platform/tokens/verify "HTTP/1.1 200 OK"
+2026-02-25 06:36:07,445 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-25 06:36:07,445 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-02-25 06:36:07,446 - httpcore.http11 - DEBUG - response_closed.started
+2026-02-25 06:36:07,446 - httpcore.http11 - DEBUG - response_closed.complete
+2026-02-25 06:36:07,446 - httpcore.connection - DEBUG - close.started
+2026-02-25 06:36:07,446 - httpcore.connection - DEBUG - close.complete
+2026-02-25 06:36:07,447 - routers.auth - DEBUG - [token/exchange] Issuer response status: 200
+2026-02-25 06:36:07,447 - routers.auth - DEBUG - [token/exchange] Issuer response body: {'success': True, 'data': {'exp': 1774614628, 'user_id': 980326, 'email': 'victorvenuci@gmail.com', 'pv': 0}, 'message': 'Platform token verified', 'code': 0, 'timestamp': '2026-02-25T14:36:07.440125'}
+2026-02-25 06:36:07,448 - routers.auth - INFO - [token/exchange] Token verified, platform_user_id=980326, email=victorvenuci@gmail.com
+2026-02-25 06:36:07,448 - routers.auth - INFO - [token/exchange] Admin user verified, issuing admin token without DB persistence
+2026-02-25 06:36:07,448 - routers.auth - DEBUG - [token/exchange] Admin user object for token issuance: id=980326, email=victorvenuci@gmail.com, role=admin
+2026-02-25 06:36:07,448 - core.config - DEBUG - Read dynamic attribute jwt_expire_minutes from environment variable JWT_EXPIRE_MINUTES
+2026-02-25 06:36:07,448 - core.config - DEBUG - Read dynamic attribute jwt_secret_key from environment variable JWT_SECRET_KEY
+2026-02-25 06:36:07,448 - core.config - DEBUG - Read dynamic attribute jwt_algorithm from environment variable JWT_ALGORITHM
+2026-02-25 06:36:07,460 - core.auth - DEBUG - Authentication token created for user hash: 6d7674b4
+2026-02-25 06:36:07,460 - routers.auth - INFO - [token/exchange] Token issued successfully for user_id=980326, expires_at=2026-03-27 14:36:07.448730+00:00
+2026-02-25 06:36:07,460 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4040s
+2026-02-25 06:36:10,431 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 06:36:10,612 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 06:36:10,612 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:36:10,613 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:36:10,613 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=20, fields=None
+2026-02-25 06:36:11,091 - routers.perfis_usuarios - DEBUG - Found 0 perfis_usuarioss
+2026-02-25 06:36:11,091 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4788s
+2026-02-25 06:36:11,295 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:36:11,295 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:36:11,295 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:36:11,784 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:36:11,785 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4903s
+2026-02-25 06:36:21,435 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:36:21,435 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:36:21,436 - routers.cidades - DEBUG - Querying cidadess: query=None, sort=None, skip=0, limit=5, fields=None
+2026-02-25 06:36:21,913 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:36:21,915 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4800s
+2026-02-25 06:36:30,039 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:36:30,040 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-02-25 06:36:30,040 - routers.cidades - DEBUG - Fetching cidades with id: 5, fields=None
+2026-02-25 06:36:30,408 - routers.cidades - WARNING - Cidades with id 5 not found
+2026-02-25 06:36:30,408 - core.database - ERROR - Database session error: 404: Cidades not found
+Traceback (most recent call last):
+  File "/workspace/app/backend/core/database.py", line 534, in get_db
+    yield session
+  File "/data/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 105, in app
+    response = await f(request)
+  File "/data/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 424, in app
+    raw_response = await run_endpoint_function(
+  File "/data/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 312, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/workspace/app/backend/routers/cidades.py", line 179, in get_cidades
+    raise HTTPException(status_code=404, detail="Cidades not found")
+fastapi.exceptions.HTTPException: 404: Cidades not found
+2026-02-25 06:36:30,457 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4181s
+2026-02-25 06:36:30,518 - core.database - ERROR - Failed to create database session: 404: Cidades not found
+Traceback (most recent call last):
+  File "/workspace/app/backend/core/database.py", line 534, in get_db
+    yield session
+  File "/data/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 105, in app
+    response = await f(request)
+  File "/data/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 424, in app
+    raw_response = await run_endpoint_function(
+  File "/data/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 312, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/workspace/app/backend/routers/cidades.py", line 179, in get_cidades
+    raise HTTPException(status_code=404, detail="Cidades not found")
+fastapi.exceptions.HTTPException: 404: Cidades not found
+2026-02-25 06:38:04,680 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 06:38:04,680 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:04,680 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:04,681 - routers.perfis_usuarios - DEBUG - Creating new perfis_usuarios with data: nome='Victor Alexandre' perfil='GESTOR' cidade_vinculada_id=0 cidade_vinculada_nome='' ativo=True
+2026-02-25 06:38:05,470 - services.perfis_usuarios - INFO - Created perfis_usuarios with id: 42
+2026-02-25 06:38:05,470 - routers.perfis_usuarios - INFO - Perfis_usuarios created successfully with id: 42
+2026-02-25 06:38:05,471 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7906s
+2026-02-25 06:38:05,729 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 06:38:05,901 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 06:38:05,901 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:05,902 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:38:05,902 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=20, fields=None
+2026-02-25 06:38:06,262 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:38:06,263 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3615s
+2026-02-25 06:38:06,514 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:06,514 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:38:06,515 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:38:06,537 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:06,537 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:06,537 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:38:06,538 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:06,539 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:06,539 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:38:06,556 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:06,556 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:38:06,557 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:38:06,587 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:06,587 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-02-25 06:38:06,588 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:38:07,034 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:38:07,035 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5207s
+2026-02-25 06:38:07,092 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:38:07,093 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5555s
+2026-02-25 06:38:07,300 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:38:07,301 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7451s
+2026-02-25 06:38:07,330 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:38:07,331 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7924s
+2026-02-25 06:38:07,368 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:38:07,368 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7814s
+2026-02-25 06:38:13,843 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:13,844 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-02-25 06:38:13,844 - routers.pacotes - DEBUG - Querying pacotess: query={"cidade_id":4}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:38:14,338 - routers.pacotes - DEBUG - Found 2 pacotess
+2026-02-25 06:38:14,339 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4958s
+2026-02-25 06:38:26,207 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:26,207 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:38:26,208 - routers.pacotes - DEBUG - Querying pacotess: query={"cidade_id":4}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:38:26,682 - routers.pacotes - DEBUG - Found 2 pacotess
+2026-02-25 06:38:26,683 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4756s
+2026-02-25 06:38:36,525 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:36,525 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:38:36,526 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:38:36,527 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:36,527 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:36,527 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:38:36,530 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:36,530 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:36,530 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:38:36,531 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:36,531 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:36,531 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:38:36,532 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:36,532 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:36,532 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:38:36,894 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:38:36,895 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3638s
+2026-02-25 06:38:36,966 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:38:36,967 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4398s
+2026-02-25 06:38:36,979 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:38:36,980 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4504s
+2026-02-25 06:38:37,014 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:38:37,014 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4821s
+2026-02-25 06:38:37,149 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:38:37,150 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.6246s
+2026-02-25 06:38:52,653 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 06:38:52,654 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:52,654 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:38:52,654 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:38:52,656 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:52,656 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:52,656 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:38:52,657 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:52,657 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:52,657 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:38:52,658 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:52,659 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:38:52,659 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:38:52,659 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:52,660 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:52,660 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:38:52,813 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 06:38:52,813 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:52,813 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:52,813 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=20, fields=None
+2026-02-25 06:38:53,015 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:38:53,016 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3576s
+2026-02-25 06:38:53,018 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:38:53,019 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3649s
+2026-02-25 06:38:53,042 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:38:53,042 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3850s
+2026-02-25 06:38:53,150 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:38:53,150 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4909s
+2026-02-25 06:38:53,160 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:38:53,160 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5045s
+2026-02-25 06:38:53,171 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:53,171 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:38:53,171 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:38:53,172 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:53,173 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:53,173 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:38:53,195 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:53,195 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:53,195 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:38:53,310 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:53,311 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:38:53,311 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:38:53,322 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:53,322 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:53,322 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:38:53,510 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:38:53,510 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.6975s
+2026-02-25 06:38:53,527 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:38:53,528 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3578s
+2026-02-25 06:38:53,584 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:38:53,585 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3900s
+2026-02-25 06:38:53,659 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:38:53,659 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4869s
+2026-02-25 06:38:53,681 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:38:53,682 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3717s
+2026-02-25 06:38:53,700 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:38:53,701 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3789s
+2026-02-25 06:38:53,765 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:53,765 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:38:53,765 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:38:53,767 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:53,767 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:53,767 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:38:53,812 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:53,812 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:53,813 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:38:53,832 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:53,832 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:38:53,833 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:38:53,852 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:53,853 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:38:53,853 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:38:54,197 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:38:54,198 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3657s
+2026-02-25 06:38:54,221 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:38:54,222 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3696s
+2026-02-25 06:38:54,239 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:38:54,240 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4729s
+2026-02-25 06:38:54,300 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:38:54,300 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5358s
+2026-02-25 06:38:54,327 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:38:54,328 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5158s
+2026-02-25 06:38:54,754 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 06:38:54,755 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:54,755 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:54,756 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:38:54,757 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:54,757 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:38:54,757 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:38:54,758 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:54,758 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:54,759 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:38:54,760 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:54,760 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:38:54,760 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:38:54,761 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:54,761 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:54,762 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:38:54,935 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 06:38:54,935 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:54,936 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:54,936 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=20, fields=None
+2026-02-25 06:38:55,134 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:38:55,134 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3792s
+2026-02-25 06:38:55,234 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:38:55,235 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4752s
+2026-02-25 06:38:55,236 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:38:55,236 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4750s
+2026-02-25 06:38:55,248 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:38:55,249 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4920s
+2026-02-25 06:38:55,249 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:38:55,250 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4916s
+2026-02-25 06:38:55,286 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:55,287 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-02-25 06:38:55,287 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:38:55,387 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:55,388 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:38:55,388 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:38:55,391 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:55,391 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:55,391 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:38:55,397 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:55,397 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:55,397 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:38:55,413 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:55,413 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:55,413 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:38:55,453 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:38:55,454 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5184s
+2026-02-25 06:38:55,536 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 06:38:55,664 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:38:55,665 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3783s
+2026-02-25 06:38:55,744 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:38:55,745 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3576s
+2026-02-25 06:38:55,746 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:38:55,746 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3553s
+2026-02-25 06:38:55,755 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 06:38:55,755 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:55,755 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:55,756 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=20, fields=None
+2026-02-25 06:38:55,785 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:38:55,785 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3728s
+2026-02-25 06:38:55,815 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:55,816 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:38:55,816 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:38:55,883 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:38:55,883 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4869s
+2026-02-25 06:38:55,899 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:55,899 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:38:55,900 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:38:55,905 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:55,905 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:38:55,905 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:38:55,937 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:55,938 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-02-25 06:38:55,938 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:38:56,033 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:56,034 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-02-25 06:38:56,034 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:38:56,142 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:38:56,143 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3879s
+2026-02-25 06:38:56,192 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:38:56,192 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3771s
+2026-02-25 06:38:56,255 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:38:56,256 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3569s
+2026-02-25 06:38:56,263 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:38:56,264 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3591s
+2026-02-25 06:38:56,309 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:38:56,310 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3727s
+2026-02-25 06:38:56,355 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:56,355 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:38:56,355 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:38:56,400 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:38:56,401 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3671s
+2026-02-25 06:38:56,409 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:56,409 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:56,409 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:38:56,417 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:56,417 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:38:56,417 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:38:56,461 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:56,461 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:38:56,461 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:38:56,554 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:56,555 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-02-25 06:38:56,555 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:38:56,777 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:38:56,778 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3612s
+2026-02-25 06:38:56,886 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:38:56,887 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5322s
+2026-02-25 06:38:56,910 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:38:56,918 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5093s
+2026-02-25 06:38:56,931 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:56,932 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-02-25 06:38:56,932 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:38:56,941 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:38:56,942 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4814s
+2026-02-25 06:38:56,943 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:38:56,944 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3896s
+2026-02-25 06:38:57,039 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:57,040 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:38:57,040 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:38:57,070 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:57,071 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-02-25 06:38:57,071 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:38:57,119 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:57,119 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:38:57,120 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:38:57,121 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:57,121 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0008s
+2026-02-25 06:38:57,122 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:38:57,301 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:38:57,302 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3708s
+2026-02-25 06:38:57,416 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:38:57,417 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3776s
+2026-02-25 06:38:57,456 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:57,456 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:38:57,457 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:38:57,531 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:38:57,532 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4130s
+2026-02-25 06:38:57,570 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:57,570 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:57,570 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:38:57,618 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:38:57,619 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4984s
+2026-02-25 06:38:57,619 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:38:57,620 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5493s
+2026-02-25 06:38:57,680 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:57,680 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:38:57,681 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:38:57,782 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:57,782 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-02-25 06:38:57,783 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:38:57,785 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:38:57,786 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:38:57,786 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:38:57,829 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:38:57,829 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3732s
+2026-02-25 06:38:57,935 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:38:57,936 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3659s
+2026-02-25 06:38:58,036 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:38:58,037 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3570s
+2026-02-25 06:38:58,262 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:38:58,263 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4776s
+2026-02-25 06:38:58,282 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:38:58,283 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5012s
+2026-02-25 06:39:27,711 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:39:27,712 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:39:27,712 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:39:27,714 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:39:27,714 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:39:27,715 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:39:27,715 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:39:27,716 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:39:27,716 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:39:27,716 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:39:27,717 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:39:27,717 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:39:27,718 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:39:27,718 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:39:27,718 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:39:28,076 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:39:28,077 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3609s
+2026-02-25 06:39:28,078 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:39:28,078 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3608s
+2026-02-25 06:39:28,081 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:39:28,082 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3663s
+2026-02-25 06:39:28,083 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:39:28,084 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3694s
+2026-02-25 06:39:28,098 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:39:28,098 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3871s
+2026-02-25 06:39:37,732 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 06:39:37,911 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 06:39:37,911 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:39:37,912 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:39:37,912 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=20, fields=None
+2026-02-25 06:39:38,415 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:39:38,416 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5043s
+2026-02-25 06:39:38,676 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:39:38,676 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:39:38,677 - routers.transferencias - DEBUG - Querying transferenciass: query={}, sort=-data_hora, skip=0, limit=200, fields=None
+2026-02-25 06:39:38,700 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:39:38,701 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:39:38,701 - routers.confirmacoes - DEBUG - Querying confirmacoess: query={}, sort=-data_hora, skip=0, limit=200, fields=None
+2026-02-25 06:39:38,730 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:39:38,730 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:39:38,730 - routers.leituras_auxiliar - DEBUG - Querying leituras_auxiliars: query={}, sort=-created_at, skip=0, limit=200, fields=None
+2026-02-25 06:39:38,731 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:39:38,732 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:39:38,732 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=200, fields=None
+2026-02-25 06:39:39,101 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:39:39,101 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3699s
+2026-02-25 06:39:39,185 - routers.confirmacoes - DEBUG - Found 1 confirmacoess
+2026-02-25 06:39:39,186 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4854s
+2026-02-25 06:39:39,186 - routers.transferencias - DEBUG - Found 2 transferenciass
+2026-02-25 06:39:39,187 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5110s
+2026-02-25 06:39:39,253 - routers.leituras_auxiliar - DEBUG - Found 2 leituras_auxiliars
+2026-02-25 06:39:39,254 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5241s
+2026-02-25 06:40:56,996 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 06:40:57,182 - core.auth - DEBUG - Authentication token validated for user hash: 6d7674b4
+2026-02-25 06:40:57,183 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:40:57,183 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:40:57,183 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=20, fields=None
+2026-02-25 06:40:57,570 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:40:57,571 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3880s
+2026-02-25 06:40:57,788 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:40:57,788 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:40:57,788 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:40:57,789 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:40:57,789 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:40:57,789 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:40:57,790 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:40:57,790 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:40:57,790 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:40:57,792 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:40:57,792 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:40:57,793 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:40:57,793 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:40:57,793 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:40:57,794 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:40:58,148 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:40:58,148 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3564s
+2026-02-25 06:40:58,162 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:40:58,162 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3746s
+2026-02-25 06:40:58,280 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:40:58,280 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4913s
+2026-02-25 06:40:58,454 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:40:58,454 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.6611s
+2026-02-25 06:40:58,504 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:40:58,504 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7144s
+2026-02-25 06:41:27,810 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:41:27,810 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:41:27,811 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:41:27,812 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:41:27,812 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:41:27,812 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:41:27,819 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:41:27,819 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:41:27,820 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:41:27,938 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:41:27,938 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0008s
+2026-02-25 06:41:27,939 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:41:27,942 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:41:27,942 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:41:27,942 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:41:28,172 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:41:28,173 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3615s
+2026-02-25 06:41:28,195 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:41:28,196 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3766s
+2026-02-25 06:41:28,197 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:41:28,197 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3870s
+2026-02-25 06:41:28,305 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:41:28,306 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3641s
+2026-02-25 06:41:28,307 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:41:28,308 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3703s
+2026-02-25 06:41:57,814 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:41:57,815 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-02-25 06:41:57,815 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:41:57,817 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:41:57,817 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:41:57,817 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:41:57,818 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:41:57,818 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:41:57,819 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:41:57,819 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:41:57,820 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:41:57,820 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:41:57,940 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:41:57,941 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-02-25 06:41:57,941 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:41:58,177 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:41:58,177 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3607s
+2026-02-25 06:41:58,178 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:41:58,179 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3644s
+2026-02-25 06:41:58,205 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:41:58,206 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3870s
+2026-02-25 06:41:58,256 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:41:58,256 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4384s
+2026-02-25 06:41:58,309 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:41:58,310 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3698s
+2026-02-25 06:42:27,812 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:42:27,813 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:42:27,813 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:42:27,814 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:42:27,814 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:42:27,815 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:42:27,815 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:42:27,815 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:42:27,816 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:42:27,816 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:42:27,816 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:42:27,817 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:42:27,817 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:42:27,817 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:42:27,818 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:42:28,174 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:42:28,174 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3603s
+2026-02-25 06:42:28,175 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:42:28,175 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3601s
+2026-02-25 06:42:28,183 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:42:28,183 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3707s
+2026-02-25 06:42:28,192 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:42:28,193 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3754s
+2026-02-25 06:42:28,331 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:42:28,332 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5159s
+2026-02-25 06:42:57,791 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:42:57,792 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-02-25 06:42:57,792 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:42:57,793 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:42:57,794 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:42:57,794 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:42:57,795 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:42:57,795 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:42:57,795 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:42:57,796 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:42:57,796 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:42:57,796 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:42:57,797 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:42:57,797 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:42:57,797 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:42:58,156 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:42:58,157 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3655s
+2026-02-25 06:42:58,165 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:42:58,166 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3699s
+2026-02-25 06:42:58,191 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:42:58,191 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3978s
+2026-02-25 06:42:58,214 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:42:58,215 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4200s
+2026-02-25 06:42:58,298 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:42:58,298 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5015s
+2026-02-25 06:43:27,818 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:43:27,818 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:43:27,818 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:43:27,819 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:43:27,819 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:43:27,820 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:43:27,820 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:43:27,821 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:43:27,821 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:43:27,821 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:43:27,822 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:43:27,822 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:43:27,823 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:43:27,823 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:43:27,823 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:43:28,183 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:43:28,184 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3627s
+2026-02-25 06:43:28,186 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:43:28,187 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3642s
+2026-02-25 06:43:28,187 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:43:28,188 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3686s
+2026-02-25 06:43:28,189 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:43:28,190 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3691s
+2026-02-25 06:43:28,206 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:43:28,207 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3894s
+2026-02-25 06:43:57,806 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:43:57,807 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-02-25 06:43:57,807 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:43:57,809 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:43:57,809 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:43:57,809 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:43:57,810 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:43:57,810 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:43:57,811 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:43:57,812 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:43:57,812 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:43:57,812 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:43:57,935 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:43:57,936 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-02-25 06:43:57,936 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:43:58,171 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:43:58,171 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3610s
+2026-02-25 06:43:58,233 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:43:58,234 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4226s
+2026-02-25 06:43:58,287 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:43:58,288 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4787s
+2026-02-25 06:43:58,309 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:43:58,310 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5034s
+2026-02-25 06:43:58,429 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:43:58,430 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4946s
+2026-02-25 06:44:27,804 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:44:27,805 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0007s
+2026-02-25 06:44:27,805 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:44:27,807 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:44:27,807 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:44:27,807 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:44:27,808 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:44:27,808 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:44:27,808 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:44:27,809 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:44:27,809 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:44:27,810 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:44:27,810 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:44:27,810 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:44:27,811 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:44:28,168 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:44:28,169 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3620s
+2026-02-25 06:44:28,170 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:44:28,170 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3607s
+2026-02-25 06:44:28,170 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:44:28,171 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3628s
+2026-02-25 06:44:28,187 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:44:28,188 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3773s
+2026-02-25 06:44:28,321 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:44:28,321 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5174s
+2026-02-25 06:44:57,789 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:44:57,789 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:44:57,790 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:44:57,791 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:44:57,791 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:44:57,791 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:44:57,792 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:44:57,792 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:44:57,792 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:44:57,793 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:44:57,793 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:44:57,793 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:44:57,846 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:44:57,847 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:44:57,847 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:44:58,149 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:44:58,150 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3592s
+2026-02-25 06:44:58,151 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:44:58,152 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3601s
+2026-02-25 06:44:58,155 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:44:58,155 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3625s
+2026-02-25 06:44:58,160 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:44:58,161 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3718s
+2026-02-25 06:44:58,223 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:44:58,224 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3779s
+2026-02-25 06:45:27,794 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:45:27,795 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:45:27,795 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:45:27,796 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:45:27,796 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:45:27,796 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:45:27,797 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:45:27,797 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:45:27,797 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:45:27,798 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:45:27,798 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:45:27,798 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:45:27,922 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:45:27,922 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:45:27,922 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:45:28,158 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:45:28,159 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3614s
+2026-02-25 06:45:28,161 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:45:28,162 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3656s
+2026-02-25 06:45:28,162 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:45:28,163 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3659s
+2026-02-25 06:45:28,183 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:45:28,185 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3902s
+2026-02-25 06:45:28,294 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:45:28,294 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3722s
+2026-02-25 06:45:57,810 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:45:57,810 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:45:57,810 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:45:57,811 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:45:57,811 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:45:57,811 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:45:57,812 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:45:57,812 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:45:57,813 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:45:57,813 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:45:57,814 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:45:57,814 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:45:57,815 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:45:57,815 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:45:57,815 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:45:58,171 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:45:58,172 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3607s
+2026-02-25 06:45:58,175 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:45:58,176 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3625s
+2026-02-25 06:45:58,188 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:45:58,188 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3789s
+2026-02-25 06:45:58,200 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:45:58,201 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3860s
+2026-02-25 06:45:58,232 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:45:58,233 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4210s
+2026-02-25 06:46:27,787 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:46:27,787 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:46:27,787 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:46:27,788 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:46:27,788 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:46:27,789 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:46:27,789 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:46:27,789 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:46:27,790 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:46:27,790 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:46:27,791 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:46:27,791 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:46:27,791 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:46:27,792 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:46:27,792 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:46:28,149 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:46:28,150 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3621s
+2026-02-25 06:46:28,158 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:46:28,159 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3723s
+2026-02-25 06:46:28,168 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:46:28,169 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3785s
+2026-02-25 06:46:28,179 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:46:28,180 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3882s
+2026-02-25 06:46:28,274 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:46:28,275 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4859s
+2026-02-25 06:46:57,785 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:46:57,785 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:46:57,785 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:46:57,786 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:46:57,787 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:46:57,787 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:46:57,787 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:46:57,788 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:46:57,788 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:46:57,788 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:46:57,789 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:46:57,789 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:46:57,923 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:46:57,923 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:46:57,923 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:46:58,145 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:46:58,145 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3589s
+2026-02-25 06:46:58,164 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:46:58,164 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3760s
+2026-02-25 06:46:58,217 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:46:58,218 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4305s
+2026-02-25 06:46:58,266 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:46:58,267 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4823s
+2026-02-25 06:46:58,309 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:46:58,309 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3865s
+2026-02-25 06:47:27,782 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:47:27,782 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:47:27,783 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:47:27,788 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:47:27,788 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:47:27,788 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:47:27,789 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:47:27,789 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:47:27,789 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:47:27,792 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:47:27,792 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:47:27,792 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:47:27,916 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:47:27,916 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:47:27,917 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:47:28,145 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:47:28,146 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3585s
+2026-02-25 06:47:28,147 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:47:28,147 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3654s
+2026-02-25 06:47:28,164 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:47:28,165 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3762s
+2026-02-25 06:47:28,168 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:47:28,169 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3769s
+2026-02-25 06:47:28,278 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:47:28,279 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3634s
+2026-02-25 06:47:57,781 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:47:57,782 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:47:57,782 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:47:57,783 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:47:57,783 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:47:57,784 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:47:57,784 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:47:57,784 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:47:57,785 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:47:57,785 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:47:57,785 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:47:57,786 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:47:57,787 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:47:57,787 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:47:57,787 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:47:58,143 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:47:58,143 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3602s
+2026-02-25 06:47:58,149 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:47:58,150 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3659s
+2026-02-25 06:47:58,156 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:47:58,157 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3707s
+2026-02-25 06:47:58,161 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:47:58,161 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3761s
+2026-02-25 06:47:58,168 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:47:58,170 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3883s
+2026-02-25 06:48:27,786 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:48:27,786 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-02-25 06:48:27,787 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:48:27,788 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:48:27,788 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:48:27,788 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:48:27,789 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:48:27,789 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:48:27,789 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:48:27,790 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:48:27,790 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:48:27,791 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:48:27,791 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:48:27,791 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:48:27,792 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:48:28,146 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:48:28,147 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3592s
+2026-02-25 06:48:28,147 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:48:28,148 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3621s
+2026-02-25 06:48:28,154 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:48:28,155 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3659s
+2026-02-25 06:48:28,160 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:48:28,160 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3700s
+2026-02-25 06:48:28,166 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:48:28,167 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3753s
+2026-02-25 06:48:57,819 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:48:57,820 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:48:57,820 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:48:57,821 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:48:57,821 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:48:57,821 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:48:57,822 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:48:57,822 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:48:57,822 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:48:57,823 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:48:57,823 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:48:57,823 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:48:57,824 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:48:57,825 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:48:57,825 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:48:58,179 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:48:58,180 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3591s
+2026-02-25 06:48:58,181 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:48:58,181 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3595s
+2026-02-25 06:48:58,186 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:48:58,187 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3637s
+2026-02-25 06:48:58,193 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:48:58,194 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3694s
+2026-02-25 06:48:58,206 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:48:58,206 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3869s
+2026-02-25 06:49:27,793 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:49:27,793 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-02-25 06:49:27,793 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:49:27,795 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:49:27,795 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:49:27,795 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:49:27,796 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:49:27,796 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:49:27,796 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:49:27,797 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:49:27,797 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-02-25 06:49:27,798 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:49:27,798 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:49:27,799 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-02-25 06:49:27,799 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:49:28,157 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:49:28,158 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3614s
+2026-02-25 06:49:28,160 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:49:28,161 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3636s
+2026-02-25 06:49:28,273 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:49:28,274 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4793s
+2026-02-25 06:49:28,290 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:49:28,291 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4924s
+2026-02-25 06:49:28,296 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:49:28,297 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5044s
+2026-02-25 06:49:57,790 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:49:57,790 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:49:57,790 - routers.resumos_triagem - DEBUG - Querying resumos_triagems: query={}, sort=-created_at, skip=0, limit=100, fields=None
+2026-02-25 06:49:57,791 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:49:57,791 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:49:57,791 - routers.pacotes - DEBUG - Querying pacotess: query={}, sort=None, skip=0, limit=500, fields=None
+2026-02-25 06:49:57,792 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:49:57,792 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:49:57,792 - routers.perfis_usuarios - DEBUG - Querying perfis_usuarioss: query={}, sort=None, skip=0, limit=200, fields=None
+2026-02-25 06:49:57,793 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:49:57,793 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-02-25 06:49:57,793 - routers.rotas - DEBUG - Querying rotass: query={}, sort=-created_at, skip=0, limit=50, fields=None
+2026-02-25 06:49:57,917 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-02-25 06:49:57,917 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-02-25 06:49:57,918 - routers.cidades - DEBUG - Querying cidadess: query={}, sort=None, skip=0, limit=50, fields=None
+2026-02-25 06:49:58,152 - routers.rotas - DEBUG - Found 5 rotass
+2026-02-25 06:49:58,153 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3601s
+2026-02-25 06:49:58,154 - routers.perfis_usuarios - DEBUG - Found 1 perfis_usuarioss
+2026-02-25 06:49:58,154 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3618s
+2026-02-25 06:49:58,211 - routers.pacotes - DEBUG - Found 14 pacotess
+2026-02-25 06:49:58,212 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4214s
+2026-02-25 06:49:58,288 - routers.cidades - DEBUG - Found 5 cidadess
+2026-02-25 06:49:58,289 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3724s
+2026-02-25 06:49:58,305 - routers.resumos_triagem - DEBUG - Found 2 resumos_triagems
+2026-02-25 06:49:58,305 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5154s
+2026-02-25 06:50:08,334 - services.database - DEBUG - [DB_OP] Starting database close
+2026-02-25 06:50:08,719 - core.database - INFO - Database connection closed and engine disposed
+2026-02-25 06:50:08,720 - services.database - INFO - Database connections closed
+2026-02-25 06:50:08,720 - services.database - DEBUG - [DB_OP] Database close completed in 0.3862s
