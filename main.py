@@ -1,111 +1,87 @@
-import logging
 import os
-from contextlib import asynccontextmanager
-from datetime import datetime
-
+import logging
 from fastapi import FastAPI, HTTPException, Request, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-from fastapi.routing import APIRouter
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, declarative_base
+from sqlalchemy import Column, Integer, String, Boolean
 
+# ===============================
+# DATABASE CONFIG
+# ===============================
 
-# ==============================
-# LOGGING SIMPLIFICADO (Cloud Safe)
-# ==============================
+DATABASE_URL = os.getenv("DATABASE_URL")
 
-def setup_logging():
-    log_format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+if not DATABASE_URL:
+    raise Exception("DATABASE_URL não encontrada nas variáveis de ambiente.")
 
-    logging.basicConfig(
-        level=logging.INFO,
-        format=log_format,
-        handlers=[
-            logging.StreamHandler(),  # Apenas console (Render usa console)
-        ],
-    )
+engine = create_engine(DATABASE_URL)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+Base = declarative_base()
 
-    logging.getLogger("uvicorn").setLevel(logging.INFO)
-    logging.getLogger("fastapi").setLevel(logging.INFO)
+# ===============================
+# MODEL USER
+# ===============================
 
-    logger = logging.getLogger(__name__)
-    logger.info("=== Logging inicializado ===")
+class User(Base):
+    _tablename_ = "users"
 
+    id = Column(Integer, primary_key=True, index=True)
+    username = Column(String, unique=True, index=True, nullable=False)
+    password = Column(String, nullable=False)
+    role = Column(String, nullable=False)
+    base = Column(String, nullable=False)
+    active = Column(Boolean, default=True)
 
-# ==============================
-# LIFESPAN SIMPLES (SEM BANCO)
-# ==============================
+# ===============================
+# CREATE TABLES
+# ===============================
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    print("=== Aplicação iniciando ===")
-    yield
-    print("=== Aplicação encerrando ===")
+Base.metadata.create_all(bind=engine)
 
-
-# ==============================
-# APP PRINCIPAL
-# ==============================
+# ===============================
+# FASTAPI APP
+# ===============================
 
 app = FastAPI(
     title="Dracco Backend",
     description="Sistema Logístico Dracco",
-    version="1.0.0",
-    lifespan=lifespan,
+    version="1.0.0"
 )
 
-
-# ==============================
-# CORS LIBERADO
-# ==============================
+# ===============================
+# CORS
+# ===============================
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origin_regex=r".*",
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-
-# ==============================
-# ROTAS BÁSICAS
-# ==============================
+# ===============================
+# ROUTES
+# ===============================
 
 @app.get("/")
 def root():
-    return {"status": "Dracco Backend Online 🚀"}
-
+    return {"message": "Dracco Backend está rodando 🚀"}
 
 @app.get("/health")
 def health():
-    return {"status": "healthy"}
+    return {"status": "ok"}
 
-
-# ==============================
-# HANDLER GLOBAL DE ERRO
-# ==============================
+# ===============================
+# GLOBAL ERROR HANDLER
+# ===============================
 
 @app.exception_handler(Exception)
-async def general_exception_handler(request: Request, exc: Exception):
-    logging.error(f"Erro interno: {str(exc)}")
+async def global_exception_handler(request: Request, exc: Exception):
+    logging.error(str(exc))
     return JSONResponse(
         status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
         content={"detail": "Internal Server Error"},
-    )
-
-
-# ==============================
-# EXECUÇÃO LOCAL (OPCIONAL)
-# ==============================
-
-if __name__ == "__main__":
-    import uvicorn
-
-    port = int(os.getenv("PORT", 8000))
-
-    uvicorn.run(
-        "main:app",
-        host="0.0.0.0",
-        port=port,
-        reload=False,
     )
