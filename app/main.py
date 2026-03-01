@@ -1,13 +1,13 @@
 from fastapi import FastAPI
-from .database import engine
-from .models import Base
-from .routers import users
+from app.database import engine
+from app.models import Base
+from app.routers.users import router as users_router
 
 app = FastAPI(title="Dracco Backend Pro")
 
 Base.metadata.create_all(bind=engine)
 
-app.include_router(users.router)
+app.include_router(users_router)
 
 @app.get("/")
 def root():
