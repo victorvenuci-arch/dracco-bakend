@@ -1,21 +1,19 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-# Importa banco
 from services.database_core import engine, Base
-
-# Importa modelos (IMPORTANTE para criar tabela)
 from data_models.user import User
+from routers.users import router as users_router
 
 app = FastAPI(
     title="Dracco Backend",
     version="1.0.0"
 )
 
-# Cria todas as tabelas registradas no Base
 Base.metadata.create_all(bind=engine)
 
-# CORS
+app.include_router(users_router)
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
