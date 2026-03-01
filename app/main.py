@@ -1,18 +1,16 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
-from app.database import SessionLocal, engine
-from app.models import Base, User
-from pydantic import BaseModel
-import hashlib
+from app.database import SessionLocal, engine, Base
+from app import models, schemas
+from passlib.context import CryptContext
 
-# recria as tabelas (temporário para corrigir estrutura)
-Base.metadata.drop_all(bind=engine)
 Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="Dracco Backend")
+app = FastAPI(title="Dracco API 🚀")
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
-# dependency de banco
 def get_db():
     db = SessionLocal()
     try:
@@ -21,40 +19,28 @@ def get_db():
         db.close()
 
 
-class UserCreate(BaseModel):
-    name: str
-    email: str
-    password: str
-
-
 @app.get("/")
 def root():
-    return {"message": "API funcionando 🚀"}
+    return {"status": "API online 🚀"}
 
 
-@app.post("/users/")
-def create_user(user: UserCreate, db: Session = Depends(get_db)):
-    # verifica se email já existe
-    existing = db.query(User).filter(User.email == user.email).first()
-    if existing:
-        raise HTTPException(status_code=400, detail="Email já cadastrado")
+@app.post("/users", response_model=schemas.UserResponse)
+def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
+    hashed_password = pwd_context.hash(user.password)
 
-    # hash simples (pode melhorar depois)
-    hashed_password = hashlib.sha256(user.password.encode()).hexdigest()
-
-    db_user = User(
+    db_user = models.User(
         name=user.name,
         email=user.email,
-        password_hash=hashed_password,
-        is_active=True,
+        password=hashed_password
     )
 
     db.add(db_user)
     db.commit()
     db.refresh(db_user)
 
-    return {
-        "id": db_user.id,
-        "email": db_user.email,
-        "active": db_user.is_active,
-    }
+    return db_user
+
+
+@app.get("/users")
+def list_users(db: Session = Depends(get_db)):
+    return db.query(models.User).all()
