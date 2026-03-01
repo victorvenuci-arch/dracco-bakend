@@ -1,14 +1,5 @@
-from fastapi import FastAPI
-from app.database import engine
-from app.models import Base
-from app.routers.users import router as users_router
+from database import engine
+from models import Base
 
-app = FastAPI(title="Dracco Backend Pro")
-
+Base.metadata.drop_all(bind=engine)
 Base.metadata.create_all(bind=engine)
-
-app.include_router(users_router)
-
-@app.get("/")
-def root():
-    return {"message": "API is running 🚀"}
