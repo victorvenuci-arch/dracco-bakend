@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dracco Dashboard 🚀</title>
+</head>
+<body>
+    <h1>Dracco Backend Interface</h1>
+
+    <h2>Criar Usuário</h2>
+    <input id="name" placeholder="Nome">
+    <input id="email" placeholder="Email">
+    <input id="password" placeholder="Senha">
+    <button onclick="createUser()">Criar</button>
+
+    <h2>Lista de Usuários</h2>
+    <button onclick="loadUsers()">Atualizar</button>
+    <ul id="users"></ul>
+
+<script>
+async function createUser() {
+    await fetch("/users", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            password: document.getElementById("password").value
+        })
+    });
+    loadUsers();
+}
+
+async function loadUsers() {
+    const res = await fetch("/users");
+    const data = await res.json();
+    const list = document.getElementById("users");
+    list.innerHTML = "";
+    data.forEach(user => {
+        list.innerHTML += `<li>${user.name} - ${user.email}</li>`;
+    });
+}
+</script>
+
+</body>
+</html>
