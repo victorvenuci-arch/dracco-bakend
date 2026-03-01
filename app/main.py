@@ -1,4 +1,6 @@
-from fastapi import FastAPI, Depends, HTTPException
+from fastapi import FastAPI, Depends, HTTPException, Request
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 from app.database import SessionLocal, engine, Base
 from app import models, schemas
@@ -10,6 +12,8 @@ app = FastAPI(title="Dracco API 🚀")
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
+templates = Jinja2Templates(directory="app/templates")
+
 
 def get_db():
     db = SessionLocal()
@@ -19,9 +23,9 @@ def get_db():
         db.close()
 
 
-@app.get("/")
-def root():
-    return {"status": "API online 🚀"}
+@app.get("/", response_class=HTMLResponse)
+def home(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
 
 
 @app.post("/users", response_model=schemas.UserResponse)
