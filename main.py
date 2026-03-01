@@ -32,7 +32,15 @@ SessionLocal = sessionmaker(
 )
 
 Base = declarative_base()
+from sqlalchemy import Column, Integer, String, Boolean
 
+class User(Base):
+    _tablename_ = "users"
+
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, nullable=False)
+    email = Column(String, unique=True, index=True)
+    active = Column(Boolean, default=True)
 # =========================
 # FASTAPI APP
 # =========================
