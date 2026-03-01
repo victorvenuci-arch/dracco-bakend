@@ -1,4 +1,4 @@
-rom sqlalchemy import Column, Integer, String, Boolean
+from sqlalchemy import Column, Integer, String, Boolean
 from services.database_core import Base
 
 class User(Base):
