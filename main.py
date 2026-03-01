@@ -1,7 +1,8 @@
 import os
-from fastapi import FastAPI
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker, declarative_base
+from fastapi import FastAPI, Depends
+from pydantic import BaseModel
+from sqlalchemy import create_engine, Column, Integer, String, Boolean
+from sqlalchemy.orm import sessionmaker, declarative_base, Session
 
 # =========================
 # CONFIGURAÇÃO DO BANCO
@@ -32,15 +33,19 @@ SessionLocal = sessionmaker(
 )
 
 Base = declarative_base()
-from sqlalchemy import Column, Integer, String, Boolean
+
+# =========================
+# MODEL
+# =========================
 
 class User(Base):
-    _tablename_ = "users"
+    __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String, nullable=False)
     email = Column(String, unique=True, index=True)
     active = Column(Boolean, default=True)
+
 # =========================
 # FASTAPI APP
 # =========================
@@ -58,10 +63,29 @@ app = FastAPI(
 def startup():
     try:
         Base.metadata.create_all(bind=engine)
-        print("Banco conectado com sucesso.")
+        print("Banco conectado e tabelas criadas.")
     except Exception as e:
         print("Erro ao conectar no banco:", e)
         raise e
+
+# =========================
+# SCHEMA
+# =========================
+
+class UserCreate(BaseModel):
+    name: str
+    email: str
+
+# =========================
+# DEPENDÊNCIA DB
+# =========================
+
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
 
 # =========================
 # ROTAS
@@ -74,3 +98,11 @@ def home():
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+@app.post("/users")
+def create_user(user: UserCreate, db: Session = Depends(get_db)):
+    db_user = User(name=user.name, email=user.email)
+    db.add(db_user)
+    db.commit()
+    db.refresh(db_user)
+    return db_user
